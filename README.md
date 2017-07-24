@@ -1,5 +1,4 @@
-## Rails Forms
-hey Tony
+## Rails Form 
 
 ## Objectives
 * Make a Rails App that lets you work with a single resources
