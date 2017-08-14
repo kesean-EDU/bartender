@@ -1,4 +1,4 @@
-## Rails Form 
+## Rails Form
 
 ## Objectives
 * Make a Rails App that lets you work with a single resources
@@ -98,3 +98,44 @@ Below your actions include the following
 ### TODO:
 
 * Finish building out this application. The update, index, show actions are incomplete but following the same patterns we have been working on before.
+
+
+*****
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Edit, Delete Review
+
+- Based on the actions we can take, what routes should already be defined?
+
+get '/drinks' to: 'drinks#index'
+get '/drinks/new' to 'drinks#new'
+post '/drinks' to 'drinks#create'
+get '/drinks/:id' to 'drinks#show'
+
+- In order, the files being hit for the create action
+- Create the edit action
+  - Routes
+  - Files
+  - Methods
+  - Views
+- What's the order for the edit action?
+- Create the delete action
+  - Routes
+  - Files
+  - Methods
+  - Views
+
+  * splat in the drinks params

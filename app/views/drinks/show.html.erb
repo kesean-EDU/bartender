@@ -1,0 +1,4 @@
+  <h1><%= @drink.name %>, $<%=@drink.price%></h1>
+  <h3><%= link_to "<< Choose another drink!", drinks_path%></h3>
+  <%= link_to "Edit drink", edit_drink_path(@drink)%>
+  <%= link_to "Delete Drink", @drink, method: :delete %>
