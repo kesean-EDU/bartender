@@ -2869,3 +2869,119 @@ Processing by DrinksController#new as HTML
 Completed 200 OK in 51ms (Views: 46.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-08-14 15:26:34 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/flatironschool/.rvm/gems/ruby-2.3.1/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb (4.7ms)
+Completed 200 OK in 22ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drinks/1/edit" for 127.0.0.1 at 2017-08-14 15:26:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/drinks/1/edit"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/drinks" for 127.0.0.1 at 2017-08-14 15:26:40 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  Rendered drinks/index.html.erb within layouts/application (219.7ms)
+Completed 500 Internal Server Error in 231ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_drink_path' for #<#<Class:0x007fe8019c1d50>:0x007fe8019c00e0>):
+    15:       <% end %>
+    16:     </table>
+    17:     <h3>Don't like these?</h3>
+    18:     <p><a class="btn btn-primary btn-lg" href=<%=new_drink_path%> role="button">Add Drink</a>
+    19:   </div>
+    20: </div>
+  
+app/views/drinks/index.html.erb:18:in `_app_views_drinks_index_html_erb___558760160865049921_70317218075380'
+Started GET "/drinks" for 127.0.0.1 at 2017-08-14 15:27:28 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (0.4ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  Rendered drinks/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 236ms (Views: 232.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/drinks/3" for 127.0.0.1 at 2017-08-14 15:27:45 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDrink Load (0.5ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  Rendered drinks/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 37ms (Views: 25.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drinks" for 127.0.0.1 at 2017-08-14 15:27:46 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (1.3ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  Rendered drinks/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/drinks/3" for 127.0.0.1 at 2017-08-14 15:27:47 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDrink Load (0.3ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  Rendered drinks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 44ms (Views: 38.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/drinks" for 127.0.0.1 at 2017-08-14 15:27:48 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  Rendered drinks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 39ms (Views: 32.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/drinks/7" for 127.0.0.1 at 2017-08-14 15:27:52 -0400
+Processing by DrinksController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT  "drinks".* FROM "drinks" WHERE "drinks"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering drinks/show.html.erb within layouts/application
+  Rendered drinks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/drinks" for 127.0.0.1 at 2017-08-14 15:27:53 -0400
+Processing by DrinksController#index as HTML
+  Rendering drinks/index.html.erb within layouts/application
+  [1m[36mDrink Load (0.2ms)[0m  [1m[34mSELECT "drinks".* FROM "drinks"[0m
+  Rendered drinks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.2ms)
+
+
