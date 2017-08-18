@@ -1,0 +1,17 @@
+<h1>Add a bartender!</h1>
+name
+drink_category
+bar(s)
+
+<%= form_for @bartender do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.collection_select :drink_category_id, DrinkCategory.all, :id, :name %>
+<%= f.collection_check_boxes :bar_ids, Bar.all, :id, :name do |b| %>
+   <div class="collection-check-box">
+     <%= b.check_box %>
+     <%= b.label %>
+   </div>
+ <% end %>
+<%= f.submit %>
+<% end %>

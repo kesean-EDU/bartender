@@ -1,3 +1,5 @@
   <h1><%= @drink.name %>, $<%=@drink.price%></h1>
+  <% if @drink.drink_category %>
+  <h2>Category: <%= @drink.drink_category.name %></h2>
+  <% end %>
   <h3><%= link_to "<< Choose another drink!", drinks_path%></h3>
-  

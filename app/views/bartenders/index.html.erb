@@ -1,0 +1,4 @@
+<h1>Bartenders</h1>
+<% @bartenders.map do |bartender|%>
+ <li>   <%=bartender.name %>, <%=bartender.drink_category.name %> </li>
+  <%end %>

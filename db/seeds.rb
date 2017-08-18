@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Bar.destroy_all
+Bartender.destroy_all
+DrinkCategory.destroy_all
+
+bars = ["Dead Rabbit", "Blarney Stone", "Black Tail"]
+bars.map { | name | Bar.create(name: name) }
+
+bartenders = [ {name: "Meryl", drink_category_id: 2}, {name: "Alex", drink_category: 3} {name: "Rachel", drink_category: 2}, {name: "Lindsey", drink_category: 4}, {name: "Johann", drink_category: 1}]
+bartenders.map { |object| Bartender.create(name: object.name, drink_category_id: object.drink_category_id)}
+
+
+drink_categories = ["Highball", "Frozen", "Bubbly", "Hot"]
+drink_categories.map { |name| DrinkCategory.create(name: name)}

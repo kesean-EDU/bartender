@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <h1>Welcome to Drinks!</h1>
+  <h1>Welcome to Nifty Bartender!</h1>
   <p>We got all kinds! Check em out below!</p>
   <div class="container">
     <table class="table">
@@ -14,5 +14,6 @@
     </tr>
       <% end %>
     </table>
+    <%= button_to "Add a drink!", new_drink_path, method: "get" %>
   </div>
 </div>

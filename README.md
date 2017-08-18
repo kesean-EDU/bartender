@@ -138,4 +138,4 @@ get '/drinks/:id' to 'drinks#show'
   - Methods
   - Views
 
-  * splat in the drinks params
+  
